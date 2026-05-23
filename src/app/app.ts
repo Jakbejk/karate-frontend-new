@@ -1,12 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-})
+@Component(
+  {
+    selector: 'app-root',
+    template: '<router-outlet/>',
+    imports: [
+      RouterOutlet
+    ]
+  }
+)
 export class App {
-  protected readonly title = signal('karate-frontend');
+  constructor(translate: TranslateService) {
+    translate.use('cs');
+  }
 }

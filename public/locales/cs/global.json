@@ -1,0 +1,249 @@
+{
+    "navigation": {
+        "brand": "Karate Příbram",
+        "users": "Členové",
+        "groups": "Skupiny",
+        "events": "Události",
+        "exercises": "Cvičení",
+        "logout": "Odhlásit se",
+        "login": "Přihlásit se"
+    },
+    "common": {
+        "actions": "Akce",
+        "export": "Exportovat",
+        "edit": "Upravit",
+        "delete": "Smazat",
+        "save": "Uložit",
+        "cancel": "Zrušit",
+        "name": "Název",
+        "description": "Popis",
+        "create": "Vytvořit",
+        "close": "Zavřít",
+        "isRequired": "Hodnota je vyžadována",
+        "from": "Od",
+        "to": "Do",
+        "showAll": "Ukázat vše",
+        "login": "Přihlásit se",
+        "logout": "Odhlásit se",
+        "custom": "Vlastní"
+    },
+    "training": {
+        "title": "Tréninky",
+        "notFound": "Trénink nebyl nalezen",
+        "anyNotFound": "Nebyl nalezen žádný trénink",
+        "filteredNotFound": "Trénink nebyl podle zadaných kritérií nalezen",
+        "search": "Vyhledat trénink",
+        "name": "Název",
+        "dialog": {
+            "create": {
+                "title": "Vytvoření tréninku"
+            },
+            "update": {
+                "title": "Úprava tréninku"
+            },
+            "delete": {
+                "title": "Smazání tréninku",
+                "confirmDelete": "Jste si jisti, že chcete smazat tento trénink? Tato akce nemůže být vrácena."
+            }
+        }
+    },
+    "user": {
+        "title": "Uživatelé",
+        "name": "Jméno",
+        "firstname": "Křesní jméno",
+        "lastname": "Přijmení",
+        "birthday": "Datum narození",
+        "contact": "Kontakt",
+        "email": "Email",
+        "weight": "Váha",
+        "kyu": "Kyu",
+        "detail": "Detail",
+        "group": "Věková Kategorie",
+        "assign": "Přihlásit uživatele",
+        "unassign": "Odhlásit uživatle",
+        "assigned": "Přihlášení uživatelé",
+        "unassigned": "Nepřihlášení uživatelé",
+        "search": "Vyhledávat uživatele",
+        "anyNotFound": "Nebyl nalezen žádný uživatel",
+        "filteredNotFound": "Uživatel nebyl podle zadaných kritérií nalezen",
+        "assignedCount": "Počet přihlášených"
+    },
+    "group": {
+        "title": "Skupiny",
+        "name": "Název",
+        "search": "Vyhledávat skupiny",
+        "assign": "Přihlásit skupinu",
+        "unassign": "Odhlásit skupinu",
+        "assigned": "Přihlášené skupiny",
+        "unassigned": "Nepřihlášené skupiny",
+        "anyNotFound": "Nebyla nalezena žádná skupina",
+        "filteredNotFound": "Skupina nebyla podle zadaných kritérií nalezena",
+        "dialog": {
+            "create": {
+                "title": "Vytvoření Skupiny"
+            },
+            "users": {
+                "title": "Správa uživatelů"
+            },
+            "participants": {
+                "title": "Účastníci skupiny"
+            },
+            "delete": {
+                "title": "Smazání záznamu skupiny",
+                "confirmDelete": "Jste si jisti, že chcete smazat tuto skupinu? Tato akce nemůže být vrácena."
+            }
+        }
+    },
+    "exercises": {
+        "title": "Cvičení",
+        "name": "Název",
+        "description": "Popis",
+        "label": "Štítek",
+        "anyNotFound": "Nebylo nalezeno žádné cvičení",
+        "filteredNotFound": "Cvičení nebylo podle zadaných kritérií nalezeno",
+        "search": "Vyhledat cvičení",
+        "searchByText": "Hledat podle textu",
+        "assigned": "Přiřazená cvičení",
+        "unassigned": "Nepřiřazená cvičení",
+        "assign": "Přidat cvičení",
+        "unassign": "Odebrat cvičení",
+        "note": "Poznámka",
+        "dialog": {
+            "update": {
+                "title": "Úprava záznamu cvičení"
+            },
+            "delete": {
+                "title": "Smazání záznamu cvičení",
+                "confirmDelete": "Jste si jisti, že chcete smazat toto cvičení? Tato akce nemůže být vrácena."
+            },
+            "create": {
+                "title": "Vytvoření cvičení"
+            }
+        }
+    },
+    "labels": {
+        "title": "Štítky",
+        "name": "Název",
+        "preview": "Náhled",
+        "color": "Barva",
+        "assign": "Přiřadit štítek",
+        "unassign": "Odebrat štítek",
+        "assigned": "Přiřazené štítky",
+        "unassigned": "Nepřiřazené štítky",
+        "search": "Vyhledat štítky",
+        "searchBy": "Vyhledávat podle štítků",
+        "anyNotFound": "Nebylo nalezen žádný štítek",
+        "filteredNotFound": "Štítek nebyl podle zadaných kritérií nalezen",
+        "dialog": {
+            "create": {
+                "title": "Vytvoření štítku"
+            },
+            "update": {
+                "title": "Úprava štítku"
+            },
+            "delete": {
+                "title": "Smazání štítku",
+                "confirmDelete": "Jste si jisti, že chcete smazat tento štítek? Tato akce nemůže být vrácena."
+            }
+        }
+    },
+    "event": {
+        "title": "Název události",
+        "type": "Typ",
+        "duration": "Délka události",
+        "durationType": "Čas",
+        "note": "Poznámka",
+        "date": "Datum Uskutečnění",
+        "period": "Perioda",
+        "startDate": "Počáteční datum",
+        "endDate": "Koncové datum",
+        "startSignBoundaryDate": "Úvodní Datum Přihlášení",
+        "signBoundaryDate": "Datum Přihlášení",
+        "assign": "Přiřadit událost",
+        "unassign": "Odebrat událost",
+        "assigned": "Přiřazené události",
+        "unassigned": "Nepřiřazené události",
+        "search": "Vyhledat události",
+        "anyNotFound": "Nebyla nalezen žádná událost",
+        "filteredNotFound": "Událost nebyla podle zadaných kritérií nalezena",
+        "notFound": "Událost nebyla nalezena",
+        "create": "Vytvořit událost",
+        "singleEvent": "Jednoduchá událost",
+        "periodicEvent": "Periodická událost",
+        "eventType": "Typ události",
+        "dialog": {
+            "update": {
+                "title": "Úprava Záznamu Události"
+            },
+            "delete": {
+                "confirmDelete": "Jste si jisti, že chcete smazat tuto událost? Tato akce nemůže být vrácena."
+            },
+            "create": {
+                "title": "Vytvoření Událostí"
+            }
+        }
+    },
+    "paginator": {
+        "of": "z",
+        "empty": "Žádná položka nenalezena"
+    },
+    "calendar": {
+        "today": "Dnes",
+        "days": {
+            "short": {
+                "sunday": "Ne",
+                "monday": "Po",
+                "tuesday": "Út",
+                "wednesday": "St",
+                "thursday": "Čt",
+                "friday": "Pá",
+                "saturday": "So"
+            }
+        },
+        "months": {
+            "january": "Leden",
+            "february": "Únor",
+            "march": "Březen",
+            "april": "Duben",
+            "may": "Květen",
+            "june": "Červen",
+            "july": "Červenec",
+            "august": "Srpen",
+            "september": "Září",
+            "october": "Říjen",
+            "november": "Listopad",
+            "december": "Prosinec"
+        }
+    },
+    "ageGroup": {
+        "children": "Děti - Agility",
+        "youngerPupils8_9": "Mladší Žáci 8-9 let",
+        "youngerPupils10_11": "Mladší Žáci 10-11 let",
+        "olderPupils": "Starší Žáci",
+        "adolescents": "Dorost",
+        "junior": "Junioři",
+        "u21": "U21",
+        "seniors": "Senioři",
+        "masters": "Masters"
+    },
+    "periods": {
+        "daily": "Denně",
+        "weekly": "Týdně",
+        "monthly": "Měsíčně"
+    },
+    "eventType": {
+        "TRAINING": "Trénink",
+        "COMPETITION": "Závody",
+        "ABOVE_STANDARD_TRAINING": "Nadstandardní trénink",
+        "TRAINEE_TRAINING": "Vlastní trénink"
+    },
+    "durationType": {
+        "wholeDay": "Celý den",
+        "oneMinute": "Minuta",
+        "fewMinutes": "Minuty",
+        "manyMinutes": "Minut",
+        "oneHour": "Hodina",
+        "fewHours": "Hodiny",
+        "manyHours": "Hodin"
+    }
+}
