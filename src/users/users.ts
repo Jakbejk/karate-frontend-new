@@ -1,10 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {Page} from '../commons/PageTools';
-import {GetHttpClient} from '../commons/RestTools';
-import {RouterOutlet} from '@angular/router';
-import {AsyncPipe} from '@angular/common';
-import {Observable} from 'rxjs';
+import {Component} from '@angular/core';
+import {AgGridAngular} from 'ag-grid-angular';
 import {TranslateModule} from '@ngx-translate/core';
+import {AdvancedTable} from '../components/AdvancedTable';
+
 
 export interface User {
   id: number;
@@ -14,21 +12,33 @@ export interface User {
   weight: number;
   birthday: Date;
   contact: string;
-  kyu: string
+  kyu: string;
 }
 
 @Component({
   selector: 'users',
   templateUrl: 'template.html',
-  imports: [RouterOutlet, AsyncPipe, TranslateModule],
-  standalone: true
+  imports: [AgGridAngular, TranslateModule],
+  standalone: true,
 })
-export class Users implements OnInit {
+export class Users {
 
-  private usersClient: GetHttpClient<Page<User>> = new GetHttpClient();
-  users$! : Observable<Page<User>>
 
-  ngOnInit(): void {
-    this.users$ = this.usersClient.GET('/users');
-  }
+  userTable: AdvancedTable<User> = new AdvancedTable("/api/v1/users", [{
+    field: 'firstName', headerValueGetter: 'user.firstname', filter: 'agTextColumnFilter'
+  }, {
+    field: 'lastName', headerValueGetter: 'user.lastname', filter: 'agTextColumnFilter'
+  }, {
+    field: 'email', headerValueGetter: 'user.email', filter: 'agTextColumnFilter'
+  }, {
+    field: 'weight', headerValueGetter: 'user.weight', filter: 'agNumberColumnFilter'
+  }, {
+    field: 'birthday',
+    headerValueGetter: 'user.birthday',
+    filter: 'agDateColumnFilter',
+  }, {
+    field: 'contact', headerValueGetter: 'user.contact', filter: 'agTextColumnFilter', sortable: false
+  }, {
+    field: 'kyu', headerValueGetter: 'user.kyu', filter: false, sortable: false,
+  },]);
 }

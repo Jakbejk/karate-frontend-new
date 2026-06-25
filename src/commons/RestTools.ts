@@ -5,16 +5,9 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {BehaviorSubject, Observable, Subscription, switchMap} from 'rxjs';
 
 export class GetHttpClient<T> {
-  private modalService: NgbModal = inject(NgbModal);
   private http: HttpClient = inject(HttpClient);
 
-
-  public GET(uri: string): Observable<T> {
-    return this.http.get(`${environment.api.url + uri}`) as Observable<T>;
-  }
-
-
-  private showError(error: any) {
-    this.modalService.open(error);
+  public GET(uri: string, params?: object): Observable<T> {
+    return this.http.get(`${environment.api.url + uri}`, params) as Observable<T>;
   }
 }

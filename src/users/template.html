@@ -4,43 +4,18 @@
       <h5 class="mb-0">{{ 'user.title' | translate }}</h5>
     </div>
     <div class="card-body p-0">
-      @if (users$ | async; as users) {
-        <table class="table table-striped table-hover mb-0">
-          <thead class="table-dark">
-            <tr>
-              <th>#</th>
-              <th>{{ 'user.firstname' | translate }}</th>
-              <th>{{ 'user.lastname' | translate }}</th>
-              <th>{{ 'user.email' | translate }}</th>
-              <th>{{ 'user.weight' | translate }}</th>
-              <th>{{ 'user.birthday' | translate }}</th>
-              <th>{{ 'user.contact' | translate }}</th>
-              <th>{{ 'user.kyu' | translate }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (user of users.content; track user.id) {
-              <tr>
-                <td class="text-muted">{{ user.id }}</td>
-                <td>{{ user.firstName }}</td>
-                <td>{{ user.lastName }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.weight }}</td>
-                <td>{{ user.birthday }}</td>
-                <td>{{ user.contact }}</td>
-                <td><span class="badge bg-primary">{{ user.kyu }}</span></td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      } @else {
-        <div class="d-flex justify-content-center p-4">
-          <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">{{ 'user.anyNotFound' | translate }}</span>
-          </div>
-        </div>
-      }
+      <ag-grid-angular
+        [theme]="userTable.theme"
+        [columnDefs]="userTable.columnDefs"
+        [defaultColDef]="userTable.defaultColDef"
+        [localeText]="userTable.localeText"
+        [rowModelType]="'infinite'"
+        [cacheBlockSize]="userTable.pageSize"
+        [paginationPageSize]="userTable.pageSize"
+        [pagination]="true"
+        (gridReady)="userTable.onGridReady($event)"
+        style="height: 520px; width: 100%;">
+      </ag-grid-angular>
     </div>
   </div>
 </div>
-<router-outlet/>

@@ -6,6 +6,6 @@ export const environment = {
     clientId: 'karate',
   },
   api: {
-    url: 'http://localhost/api/v1',
+    url: 'http://localhost',
   }
 };
