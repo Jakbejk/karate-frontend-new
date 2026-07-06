@@ -1,0 +1,104 @@
+.calendar-month-label {
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 180px;
+  text-align: center;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendar-th {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: var(--karate-green-light);
+  color: var(--karate-green);
+  border: 1px solid #e0e0e0;
+}
+
+.calendar-td {
+  vertical-align: top;
+  border: 1px solid #e0e0e0;
+  height: 110px;
+  padding: 0.3rem;
+  background-color: #ffffff;
+}
+
+.calendar-td.other-month {
+  background-color: #fafafa;
+}
+
+.calendar-td.other-month .day-number {
+  color: #bdbdbd;
+}
+
+.day-number {
+  font-size: 0.82rem;
+  font-weight: 500;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.day-number.today-circle {
+  background-color: var(--karate-red);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+  max-height: 74px;
+}
+
+.event-chip {
+  display: block;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.71rem;
+  cursor: default;
+  overflow: hidden;
+}
+
+.event-chip-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.event-training {
+  background-color: var(--karate-green-light);
+  color: var(--karate-green);
+  border-left: 3px solid var(--karate-green);
+}
+
+.event-competition {
+  background-color: var(--karate-red-light);
+  color: var(--karate-red);
+  border-left: 3px solid var(--karate-red);
+}
+
+.event-above-standard {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-left: 3px solid #1565c0;
+}
+
+.event-trainee {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+  border-left: 3px solid #6a1b9a;
+}

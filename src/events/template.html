@@ -1,10 +1,48 @@
 <div class="container mt-4">
   <div class="card shadow-sm">
-    <div class="card-header">
+    <div class="card-header d-flex align-items-center justify-content-between">
       <h5 class="mb-0">{{ 'navigation.events' | translate }}</h5>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-sm btn-outline-light" (click)="prevMonth()">&#8249;</button>
+        <span class="calendar-month-label">
+          {{ 'calendar.months.' + currentMonthKey | translate }} {{ currentYear }}
+        </span>
+        <button class="btn btn-sm btn-outline-light" (click)="nextMonth()">&#8250;</button>
+        <button class="btn btn-sm btn-light ms-2" (click)="goToToday()">
+          {{ 'calendar.today' | translate }}
+        </button>
+      </div>
     </div>
-    <div class="card-body">
-      <p class="text-muted mb-0">{{ 'event.anyNotFound' | translate }}</p>
+    <div class="card-body p-0">
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            @for (day of dayKeys; track day) {
+              <th class="calendar-th">{{ 'calendar.days.short.' + day | translate }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (week of weeks; track $index) {
+            <tr>
+              @for (cell of week; track cell.date) {
+                <td [class]="'calendar-td' + (!cell.isCurrentMonth ? ' other-month' : '') + (cell.isToday ? ' today' : '')">
+                  <div [class]="'day-number' + (cell.isToday ? ' today-circle' : '')">
+                    {{ cell.dayNumber }}
+                  </div>
+                  <div class="events-container">
+                    @for (event of cell.events; track event.id) {
+                      <div [class]="'event-chip ' + getEventTypeClass(event.type)" [title]="event.title">
+                        <span class="event-chip-text">{{ event.title }}</span>
+                      </div>
+                    }
+                  </div>
+                </td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
